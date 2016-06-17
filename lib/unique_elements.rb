@@ -5,10 +5,11 @@ def find_unique_elements(arr)
     #select each element of the array and compare each one to the rest of the array
     arr.each_index do |idx|
     #compare each element within the array
+        #arr.delete_if{|element|arr[idx] == arr[idx+1]}
         if arr[idx] == arr[idx+1]
-            arr.delete_at(idx)
+            arr.delete(arr[idx])
             #delete the first matching element
-            arr.delete_at(idx+1)
+            arr.delete(arr[idx+1])
             #delete the element that was matched
         end
     #return/print out the remaining elements within the array
