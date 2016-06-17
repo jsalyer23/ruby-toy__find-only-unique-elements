@@ -9,7 +9,7 @@ def find_unique_elements(arr)
         if arr[idx] == arr[idx+1]
             arr.delete(arr[idx])
             #delete the first matching element
-            arr.delete(arr[idx+1])
+            arr.delete(arr[idx])
             #delete the element that was matched
         end
     #return/print out the remaining elements within the array
